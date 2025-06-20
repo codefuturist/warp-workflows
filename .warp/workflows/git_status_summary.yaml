@@ -1,0 +1,10 @@
+name: Git Status Summary
+command: git status -s
+tags:
+  - git
+  - status
+description: Show a simplified git status output
+source_url: https://github.com/codefuturist/warp-workflows
+author: Colin
+author_url: https://github.com/codefuturist
+shells: []

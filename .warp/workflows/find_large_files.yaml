@@ -1,0 +1,21 @@
+name: Find Large Files
+command: find {{directory:-.}} -type f -size +{{size:-100M}} -exec ls -lh {} \; | sort -k5 -rh | head -n {{count:-10}}
+tags:
+  - files
+  - system
+  - utility
+description: Find and list the largest files in a directory
+arguments:
+  - name: directory
+    description: Directory to search in (default: current directory)
+    default_value: .
+  - name: size
+    description: Minimum file size (default: 100MB)
+    default_value: 100M
+  - name: count
+    description: Number of files to display (default: 10)
+    default_value: "10"
+source_url: https://github.com/codefuturist/warp-workflows
+author: Colin
+author_url: https://github.com/codefuturist
+shells: []

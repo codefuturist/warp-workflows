@@ -1,0 +1,11 @@
+name: System Information
+command: system_profiler SPHardwareDataType SPSoftwareDataType
+tags:
+  - system
+  - macos
+  - hardware
+description: Display detailed system hardware and software information
+source_url: https://github.com/codefuturist/warp-workflows
+author: Colin
+author_url: https://github.com/codefuturist
+shells: []
