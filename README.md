@@ -45,3 +45,27 @@ ln -sf /path/to/warp-workflows/.warp/workflows/workflow_name.yaml ~/.warp/workfl
 ```
 
 This allows you to mix these workflows with your existing personal workflows.
+
+## Maintenance
+
+When you add, update, or remove workflow files in the repository, you'll need to update the symbolic links:
+
+```bash
+# After updating the repository
+git pull
+
+# Recreate the symbolic links
+ln -sf /path/to/warp-workflows/.warp/workflows/*.yaml ~/.warp/workflows/
+```
+
+Alternatively, you can use this script to update all links:
+
+```bash
+#!/bin/bash
+repo_path="/path/to/warp-workflows/.warp/workflows"
+for file in "$repo_path"/*.yaml; do
+  filename=$(basename "$file")
+  ln -sf "$file" ~/.warp/workflows/
+done
+```
+
