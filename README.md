@@ -34,3 +34,14 @@ To use these workflows:
 ## License
 
 MIT
+
+## Alternative Installation
+
+Instead of linking the entire directory, you can create symbolic links for individual workflow files:
+
+```bash
+# For each workflow file
+ln -sf /path/to/warp-workflows/.warp/workflows/workflow_name.yaml ~/.warp/workflows/
+```
+
+This allows you to mix these workflows with your existing personal workflows.
