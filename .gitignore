@@ -5,3 +5,4 @@ workflows/src/generated_workflows/*
 build_ts/dist
 build_ts/node_modules/
 .DS_Store
+/_migration/
